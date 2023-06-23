@@ -23,9 +23,9 @@ const Header = () => {
   }
 
   return (
-    <div className="h-[100px] px-[255px] bg-white">
-      <header className="h-full container mx-auto flex justify-between items-center">
-        <nav className="flex space-x-[30px] sm:space-x-2 lg:space-x-[30px] h-full justify-center items-center">
+    <div className="flex justify-center bg-white">
+      <header className="h-[100px] sm:w-[1080px] w-1080px lg:w-[1410px] flex justify-between px-[30px] items-center">
+        <nav className="flex space-x-[30px]  sm:space-x-2 lg:space-x-[30px] h-full justify-center items-center">
           <li className="list-none">
             <Link
               href={'/'}
@@ -58,7 +58,7 @@ const Header = () => {
               PORTFOLIO
             </Link>
           </li>
-          <li className="list-none">t
+          <li className="list-none">
             <Link
               href={'/'}
               className="font-black text-cblue text-h3 sm:text-h4 lg:text-h3"
@@ -67,7 +67,7 @@ const Header = () => {
             </Link>
           </li>
         </nav>
-        <div className='flex flex-row'>
+        <div className="flex flex-row items-center">
           <SelectButton
             text={'ENG'}
             style={'light'}
