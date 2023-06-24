@@ -1,14 +1,25 @@
 import { Props } from '@/utils/interfaces/button'
 import React from 'react'
 
-const DefaultButton: React.FC<Props> = ({ text, style, onClick }) => {
+const DefaultButton: React.FC<Props> = ({
+  text,
+  style,
+  marginX,
+  marginY,
+  onClick,
+}) => {
+  let className =
+    'button flex justify-center items-center md:h-[44px] sm:h-[34px] py-[15px] px-[30px] text-h3 font-black rounded-md shadow-md'
+
+  className += marginX ? ` mx-[${marginX}]` : ` mx-[15px]`
+  className += marginY ? ` my-[${marginY}]` : ' my-[5px]'
+  className +=
+    style === 'dark'
+      ? ' bg-cblue bg-gradient-spread text-white'
+      : ' bg-white text-cblue border-2 rounded-md shadow-md border-cblue'
+
   return (
-    <button
-      className={
-        'button flex justify-center items-center h-[44px] sm:h-[33px] w-[193px] sm:w-[150px] mx-[15px] text-h3 font-black bg-cblue bg-gradient-spread text-white px-6 py-3 rounded-md shadow-md'
-      }
-      onClick={onClick}
-    >
+    <button className={className} onClick={onClick}>
       {text}
     </button>
   )

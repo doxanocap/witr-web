@@ -24,8 +24,8 @@ const Header = () => {
 
   return (
     <div className="flex justify-center bg-white">
-      <header className="h-[100px] sm:w-[1080px] w-1080px lg:w-[1410px] flex justify-between px-[30px] items-center">
-        <nav className="flex space-x-[30px]  sm:space-x-2 lg:space-x-[30px] h-full justify-center items-center">
+      <header className="flex h-[100px]  sm:w-sm md:w-md justify-between px-cm items-center">
+        <nav className="flex space-x-[30px] h-full justify-center items-center">
           <li className="list-none">
             <Link
               href={'/'}
