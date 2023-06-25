@@ -10,8 +10,8 @@ const Home = () => (
     <Header />
     <main className="flex flex-col items-center min-h-screen bg-cwhite">
       {/* BODY 1 */}
-      <div className="flex h-[800px] sm:w-sm md:w-md text-center items-center justify-end">
-        <div className="absolute sm:w-[1050px] md:w-md">
+      <div className="flex relative h-[800px] sm:w-sm md:w-md text-center items-center justify-end">
+        <div className="absolute left-[30px]">
           <div className="flex flex-col justify-center font-black text-left text-black text-h1 sm:text-h2">
             <p className="">Transform Your Business with us</p>
             <div className="flex">
@@ -32,14 +32,14 @@ const Home = () => (
             onClick={() => window.location.reload()}
           />
         </div>
-        <div className="absolute sm:w-[1050px] md:w-md mt-[700px] text-left flex flex-row text-black font-semibold md:text-h1 sm:text-h2">
-          What we{' '}
+        <div className="absolute left-[30px] bottom-[15px] text-left flex flex-row text-black font-semibold md:text-h1 sm:text-h2">
+          What we
           <div className="text-cblue sm:mx-[5px] md:mx-[9px]">strive</div> in
         </div>
         <Graphics />
       </div>
       {/* BODY 2 */}
-      <div className="grid sm:grid-rows-3 md:grid-rows-2 sm:grid-cols-2 md:grid-cols-3 gap-[30px] sm:ml-[60px] mb-[60px] sm:w-sm md:w-md">
+      <div className="grid justify-start sm:w-sm md:w-md gap-x-0 md:gap-y-[35px] sm:ml-[30px] sm:gap-y-[55px] sm:grid-rows-3 md:grid-rows-2 sm:grid-cols-2 md:grid-cols-3">
         {GridData.map((item, key) => (
           <DefaultCard
             key={key}
@@ -50,6 +50,32 @@ const Home = () => (
           />
         ))}
       </div>
+      {/* BODY 3 */}
+      <div className="flex w-full justify-center items-start h-[450px] my-[105px] bg-white">
+        <div className="flex flex-row my-[55px] text-black font-semibold md:text-h1 sm:text-h2">
+          What we
+          <div className="text-cblue sm:mx-[5px] md:mx-[9px]">strive</div> in
+        </div>
+      </div>
+      {/* BODY 4 */}
+      <div className="flex flex-col items-center w-full h-[1000px] bg-white">
+        <div className="flex flex-row my-[55px] text-black font-semibold md:text-h1 sm:text-h2">
+          What we
+          <div className="text-cblue sm:mx-[5px] md:mx-[9px]">strive</div> in
+        </div>
+        <div className="flex flex-row ">
+          <div className="flex w-[600px] h-[500px] mx-4 bg-gray-600"></div>
+          <div className="flex w-[600px] h-[500px] mx-4 bg-gray-600"></div>
+        </div>
+      </div>
+      <div className="flex w-full sm:w-sm md:w-md ">
+        <div className="flex flex-row my-[55px] text-black font-semibold md:text-h1 sm:text-h2">
+          Meet our
+          <div className="text-cblue sm:mx-[5px] md:mx-[9px]">team</div>
+        </div>
+      </div>
+
+      {/* BODY 4 */}
     </main>
 
     <Footer />
