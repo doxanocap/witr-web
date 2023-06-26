@@ -6,15 +6,15 @@ import React from 'react'
 const SelectButton: React.FC<Props> = ({
   text,
   style,
-  marginX,
-  marginY,
   onClick,
 }) => {
   let className =
-    'button flex justify-center items-center flex-row h-[44px] sm:h-[34px] px-[30px] mx-[15px] pt-1 text-h3 border-2 rounded-md shadow-md'
+    `button flex justify-center items-center 
+    flex-row pt-1 
+    sm:text-h5 md:text-h4 lg:text-h3 
+    md:px-xmd md:py-ymd lg:px-xlg lg:py-ylg 
+    border-2 rounded-md shadow-md`
 
-  className += marginX ? ` mx-[${marginX}]` : ' mx-[15px]'
-  className += marginY ? ` my-[${marginY}]` : ' my-[5px]'
   className +=
     style === 'dark'
       ? ' bg-cblue text-white border-white'

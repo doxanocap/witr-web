@@ -8,13 +8,15 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        sm: '1080px',
-        md: '1410px',
-        lg: '1920px',
+        // sm: '1080px',
+        md: '738px',
+        lg: '1280px',
       },
       screens: {
-        sm: { min: '0px', max: '1410px' },
-        md: { min: '1410px', max: '1920px' },
+        xs: { min: '0px', max: '480px' },
+        sm: { min: '480px', max: '768px' },
+        md: { min: '768px', max: '1280px' },
+        lg: { min: '1280px', max: '9990px' },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -27,9 +29,15 @@ module.exports = {
         h2: '26px',
         h3: '20px',
         h4: '16px',
+        h5: '12px',
       },
       padding: {
-        cm: '30px',
+        xsm: '7.5px',
+        xmd: '15px',
+        xlg: '30px',
+        ysm: '2.5px',
+        ymd: '4px',
+        ylg: '7.5px',
       },
       colors: {
         cblue: '#8000FF',
