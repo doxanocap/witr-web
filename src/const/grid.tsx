@@ -1,4 +1,4 @@
-import { CardProps, TeamCardProps } from '@/components/Cards'
+import { ImgCardProps, SvgCardProps } from '@/components/Cards'
 import ContactUs1 from '@/icons/contactUs1.svg'
 import ContactUs2 from '@/icons/contactUs2.svg'
 import ContactUs3 from '@/icons/contactUs3.svg'
@@ -17,13 +17,13 @@ import WhyCard4 from '@/icons/whyCard4.svg'
 import TeamAlibiSerikbay from '@/images/alibi_serikbay.png'
 import TeamEldosKadirbekov from '@/images/eldos_kadirbekov.jpg'
 
-export const StriveGridData: CardProps[] = [
+export const StriveGridData: SvgCardProps[] = [
   {
     title: 'Web Applications',
     text:
       'Power your business with our customized web applications, delivering seamless digital experiences tailored to your needs.',
     Svg: striveCard1,
-    onClick: () => {
+    onClickBtn: () => {
       window.location.reload()
     },
   },
@@ -32,7 +32,7 @@ export const StriveGridData: CardProps[] = [
     text:
       "Transform your ideas into captivating mobile apps that engage users and elevate your brand's presence in the digital world.",
     Svg: striveCard2,
-    onClick: () => {
+    onClickBtn: () => {
       window.location.reload()
     },
   },
@@ -41,7 +41,7 @@ export const StriveGridData: CardProps[] = [
     text:
       'Create intuitive and visually captivating interfaces that enhance user experiences and drive engagement.',
     Svg: striveCard3,
-    onClick: () => {
+    onClickBtn: () => {
       window.location.reload()
     },
   },
@@ -50,7 +50,7 @@ export const StriveGridData: CardProps[] = [
     text:
       'Bring your brand to life with stunning visuals that make a lasting impact, from eye-catching logos to captivating marketing materials.',
     Svg: striveCard4,
-    onClick: () => {
+    onClickBtn: () => {
       window.location.reload()
     },
   },
@@ -59,27 +59,28 @@ export const StriveGridData: CardProps[] = [
     text:
       'Leverage cutting-edge computer vision technology to analyze visual data, automate tasks, and gain valuable insights for your business.',
     Svg: striveCard5,
-    onClick: () => {
+    onClickBtn: () => {
       window.location.reload()
     },
   },
   {
     title: 'AI integration',
-    text: 'Incorporating AI technologies and capabilities into existing systems or workflows, leveraging algorithms, machine learning models to enhance the functionality and efficiency of various processes',
+    text:
+      'Incorporating AI technologies and capabilities into existing systems or workflows, leveraging algorithms, machine learning models to enhance the functionality and efficiency of various processes',
     Svg: striveCard6,
-    onClick: () => {
+    onClickBtn: () => {
       window.location.reload()
     },
   },
 ]
 
-export const WhyGridData: CardProps[] = [
+export const WhyGridData: SvgCardProps[] = [
   {
     title: 'Expertise and experience',
     text:
       'Our team consists of fully-certified and highly experienced members ',
     Svg: WhyCard1,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -87,7 +88,7 @@ export const WhyGridData: CardProps[] = [
     title: 'Customized solutions',
     text: 'Your specific needs - our individual customized solutions',
     Svg: WhyCard2,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -95,7 +96,7 @@ export const WhyGridData: CardProps[] = [
     title: 'Innovative technologies',
     text: 'Our team works with latest tools and technologies',
     Svg: WhyCard3,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -103,18 +104,18 @@ export const WhyGridData: CardProps[] = [
     title: 'Timely delivery',
     text: 'We commit to deliver our project always on time',
     Svg: WhyCard4,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
 ]
 
-export const TeamGridData: TeamCardProps[] = [
+export const TeamGridData: ImgCardProps[] = [
   {
     title: 'Eldos Kadirbekov',
     text: 'CTO & co-founder',
     img: TeamEldosKadirbekov,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -122,7 +123,7 @@ export const TeamGridData: TeamCardProps[] = [
     title: 'Alibi Serikbay',
     text: 'CEO & co-founder',
     img: TeamAlibiSerikbay,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -130,7 +131,7 @@ export const TeamGridData: TeamCardProps[] = [
     title: 'Eldos Kadirbekov',
     text: 'CTO & co-founder',
     img: TeamEldosKadirbekov,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -138,19 +139,19 @@ export const TeamGridData: TeamCardProps[] = [
     title: 'Alibi Serikbay',
     text: 'CEO & co-founder',
     img: TeamAlibiSerikbay,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
 ]
 
-export const ContactUsData: CardProps[] = [
+export const ContactUsData: SvgCardProps[] = [
   {
     title: '+77076331002',
     text: '',
     Svg: ContactUs1,
 
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -158,7 +159,7 @@ export const ContactUsData: CardProps[] = [
     title: 'witr.kz@gmail.com',
     text: '',
     Svg: ContactUs2,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -166,7 +167,7 @@ export const ContactUsData: CardProps[] = [
     title: 'Witr.kz',
     text: '',
     Svg: ContactUs3,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },
@@ -174,7 +175,7 @@ export const ContactUsData: CardProps[] = [
     title: 'witr.kz',
     text: '',
     Svg: ContactUs4,
-    onClick: () => {
+    onClickDiv: () => {
       window.location.reload()
     },
   },

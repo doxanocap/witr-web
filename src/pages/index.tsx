@@ -78,7 +78,7 @@ const Home = () => {
               title={item.title}
               text={item.text}
               Svg={item.Svg}
-              onClickBtn={item.onClick}
+              onClickBtn={item.onClickBtn}
             />
           ))}
         </div>
@@ -107,7 +107,7 @@ const Home = () => {
                 title={item.title}
                 text={item.text}
                 Svg={item.Svg}
-                onClickDiv={item.onClick}
+                onClickDiv={item.onClickDiv}
               />
             ))}
           </div>
@@ -130,7 +130,7 @@ const Home = () => {
                 title={item.title}
                 text={item.text}
                 img={item.img}
-                onClickDiv={item.onClick}
+                onClickDiv={item.onClickDiv}
               />
             ))}
           </div>
@@ -153,7 +153,7 @@ const Home = () => {
                   title={item.title}
                   text={item.text}
                   Svg={item.Svg}
-                  onClickBtn={item.onClick}
+                  onClickBtn={item.onClickBtn}
                 />
               ))}
             </div>
@@ -165,7 +165,7 @@ const Home = () => {
                   title={item.title}
                   text={item.text}
                   Svg={item.Svg}
-                  onClickBtn={item.onClick}
+                  onClickBtn={item.onClickBtn}
                 />
               ))}
             </div>

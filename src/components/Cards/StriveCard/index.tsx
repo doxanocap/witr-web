@@ -1,8 +1,13 @@
 import React from 'react'
-import { CardProps, SvgCardProps } from '..'
+import { SvgCardProps } from '..'
 import DefaultButton from '../../Buttons/Default'
 
-const StriveCard: React.FC<SvgCardProps> = ({ title, text, Svg, onClickBtn }) => {
+const StriveCard: React.FC<SvgCardProps> = ({
+  title,
+  text,
+  Svg,
+  onClickBtn,
+}) => {
   return (
     <div
       className={`relative flex 
