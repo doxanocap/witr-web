@@ -1,65 +1,42 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "paths": {
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/const/*": [
-        "./src/const/*"
-      ],
-      "@/config/*": [
-        "./src/config/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/icons/*": [
-        "./src/static/icons/*"
-      ],
-      "@/style/*": [
-        "./src/static/style/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/providers/*": [
-        "./src/providers/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ]
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "paths": {
+            "@/components/*": ["./src/components/*"],
+            "@/const/*": ["./src/const/*"],
+            "@/config/*": ["./src/config/*"],
+            "@/hooks/*": ["./src/hooks/*"],
+            "@/images/*": ["./public/images/*"],
+            "@/icons/*": ["./public/icons/*"],
+            "@/styles/*": ["./public/styles/*"],
+            "@/pages/*": ["./src/pages/*"],
+            "@/providers/*": ["./src/providers/*"],
+            "@/utils/*": ["./src/utils/*"]
+        },
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
     },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "include": [
+        "next-env.d.ts",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        ".next/types/**/*.ts"
+    ],
+    "exclude": ["node_modules"]
 }

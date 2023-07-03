@@ -8,7 +8,7 @@ const DefaultButton: React.FC<Props> = ({
 }) => {
   let className = `button flex justify-center items-center 
     font-black rounded-md shadow-md
-    sm:text-h5 md:text-h4 lg:text-h3 
+    sm:text-h16 md:text-h18 lg:text-h20 
     md:px-xmd md:py-ymd lg:px-xlg lg:py-ylg 
     `
 
