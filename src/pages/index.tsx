@@ -1,3 +1,4 @@
+import ProjectBox from '@/components/Boxes/ProjectBox'
 import DefaultButton from '@/components/Buttons/Default'
 import ContactUsCard from '@/components/Cards/ContactUsCard'
 import StriveCard from '@/components/Cards/StriveCard'
@@ -8,6 +9,7 @@ import Header from '@/components/Header'
 import SpecialText from '@/components/SpecialText'
 import {
   ContactUsData,
+  OurPorjectsGridData,
   StriveGridData,
   TeamGridData,
   WhyGridData,
@@ -83,11 +85,22 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="flex flex-col d lg:w-lg my-[100px]">
-          <div className="flex mb-[34px] md:text-h26 lg:text-h40">
-            <SpecialText prev="Our" main="projects" next="" />
+        <div className="flex flex-col items-start md:w-md lg:w-lg my-[100px]">
+          <div className="mb-[34px] md:text-h26 lg:text-h40 font-bold text-black">
+            Out projects
           </div>
-          <div className="flex w-full h-[1000px] bg-gray-500"></div>
+          {OurPorjectsGridData.map((item, key) => (
+            <ProjectBox
+              key={key}
+              float={item.float}
+              title={item.title}
+              description={item.description}
+              list_title={item.list_title}
+              list_items={item.list_items}
+              Svg={item.Svg}
+              onClick={item.onClick}
+            />
+          ))}
         </div>
 
         <div className="flex flex-col d lg:w-lg my-[100px]">

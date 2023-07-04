@@ -1,8 +1,12 @@
+import { BoxProps } from '@/components/Boxes'
 import { ImgCardProps, SvgCardProps } from '@/components/Cards'
 import ContactUs1 from '@/icons/contactUs1.svg'
 import ContactUs2 from '@/icons/contactUs2.svg'
 import ContactUs3 from '@/icons/contactUs3.svg'
 import ContactUs4 from '@/icons/contactUs4.svg'
+import OurProjects1 from '@/icons/ourProjects1.svg'
+import OurProjects2 from '@/icons/ourProjects2.svg'
+import OurProjects3 from '@/icons/ourProjects3.svg'
 import striveCard1 from '@/icons/striveCard1.svg'
 import striveCard2 from '@/icons/striveCard2.svg'
 import striveCard3 from '@/icons/striveCard3.svg'
@@ -105,6 +109,58 @@ export const WhyGridData: SvgCardProps[] = [
     text: 'We commit to deliver our project always on time',
     Svg: WhyCard4,
     onClickDiv: () => {
+      window.location.reload()
+    },
+  },
+]
+
+export const OurPorjectsGridData: BoxProps[] = [
+  {
+    float: 'right',
+    title: 'AI chat Bot',
+    description:
+      'Our AI chatbots are the ultimate solution for your business. By integrating our cutting-edge technology into your existing systems, you can take your operations to the next level, delight your customers, and achieve exponential growth.',
+    list_title: 'Benefits for Your Business:',
+    list_items: [
+      'Enhanced Customer Experience',
+      'Streamlined Operations',
+      '24/7 Support',
+    ],
+    Svg: OurProjects1,
+    onClick: () => {
+      window.location.reload()
+    },
+  },
+  {
+    float: 'right',
+    title: 'Computer Vision',
+    description:
+      'Our Plate Recognition solution for the Metallurgical Company in Temirtau combines advanced technology with a 98% accuracy rate. By seamlessly integrating with the smart parking system, it automates the identification and recording of license plates',
+    list_title: 'Results:',
+    list_items: [
+      'Streamlined Parking Procceses',
+      'Efficiency Improved',
+      'Enhanced Employee and Visitors Experience',
+    ],
+
+    Svg: OurProjects2,
+    onClick: () => {
+      window.location.reload()
+    },
+  },
+  {
+    float: 'right',
+    title: 'Mobile Application',
+    description:
+      'Our Plate Recognition solution for the Metallurgical Company in Temirtau combines advanced technology with a 98% accuracy rate. By seamlessly integrating with the smart parking system, it automates the identification and recording of license plates',
+    list_title: 'Results:',
+    list_items: [
+      'Streamlined Parking Procceses',
+      'Efficiency Improved',
+      '24/7 Support',
+    ],
+    Svg: OurProjects3,
+    onClick: () => {
       window.location.reload()
     },
   },
