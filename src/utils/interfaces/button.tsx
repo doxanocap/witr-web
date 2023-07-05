@@ -1,6 +1,7 @@
 
 export interface Props {
   text: string
+  isHidden?: boolean
   marginX?: string
   marginY?: string
   style: 'dark' | 'light'

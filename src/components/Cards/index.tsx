@@ -11,7 +11,11 @@ export interface SvgCardProps {
 export interface ImgCardProps {
   title: string
   text: string
-  img: StaticImageData 
+  img: StaticImageData
   onClickBtn?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
   onClickDiv?: (e: React.MouseEvent<HTMLDivElement>) => void
+}
+
+export interface ImgCarousel {
+  executeScroll: () => void
 }

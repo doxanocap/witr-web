@@ -140,7 +140,7 @@ export const OurPorjectsGridData: BoxProps[] = [
     list_items: [
       'Streamlined Parking Procceses',
       'Efficiency Improved',
-      'Enhanced Employee and Visitors Experience',
+      'Enhanced Experience',
     ],
 
     Svg: OurProjects2,
@@ -152,13 +152,9 @@ export const OurPorjectsGridData: BoxProps[] = [
     float: 'right',
     title: 'Mobile Application',
     description:
-      'Our Plate Recognition solution for the Metallurgical Company in Temirtau combines advanced technology with a 98% accuracy rate. By seamlessly integrating with the smart parking system, it automates the identification and recording of license plates',
-    list_title: 'Results:',
-    list_items: [
-      'Streamlined Parking Procceses',
-      'Efficiency Improved',
-      '24/7 Support',
-    ],
+      'Our solution for the DinaMarket.kz, mobile shopping app for food and groceries with ease. Find a wide range of high-quality products, from fresh produce to pantry staples, all at your fingertips.',
+    list_title: 'Services:',
+    list_items: ['Full accompaniment', 'Analytics', 'Client contact'],
     Svg: OurProjects3,
     onClick: () => {
       window.location.reload()
@@ -167,6 +163,54 @@ export const OurPorjectsGridData: BoxProps[] = [
 ]
 
 export const TeamGridData: ImgCardProps[] = [
+  {
+    title: 'Eldos Kadirbekov',
+    text: 'CTO & co-founder',
+    img: TeamEldosKadirbekov,
+    onClickDiv: () => {
+      window.location.reload()
+    },
+  },
+  {
+    title: 'Alibi Serikbay',
+    text: 'CEO & co-founder',
+    img: TeamAlibiSerikbay,
+    onClickDiv: () => {
+      window.location.reload()
+    },
+  },
+  {
+    title: 'Eldos Kadirbekov',
+    text: 'CTO & co-founder',
+    img: TeamEldosKadirbekov,
+    onClickDiv: () => {
+      window.location.reload()
+    },
+  },
+  {
+    title: 'Alibi Serikbay',
+    text: 'CEO & co-founder',
+    img: TeamAlibiSerikbay,
+    onClickDiv: () => {
+      window.location.reload()
+    },
+  },
+  {
+    title: 'Eldos Kadirbekov',
+    text: 'CTO & co-founder',
+    img: TeamEldosKadirbekov,
+    onClickDiv: () => {
+      window.location.reload()
+    },
+  },
+  {
+    title: 'Alibi Serikbay',
+    text: 'CEO & co-founder',
+    img: TeamAlibiSerikbay,
+    onClickDiv: () => {
+      window.location.reload()
+    },
+  },
   {
     title: 'Eldos Kadirbekov',
     text: 'CTO & co-founder',

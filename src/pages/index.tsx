@@ -2,26 +2,35 @@ import ProjectBox from '@/components/Boxes/ProjectBox'
 import DefaultButton from '@/components/Buttons/Default'
 import ContactUsCard from '@/components/Cards/ContactUsCard'
 import StriveCard from '@/components/Cards/StriveCard'
-import TeamCard from '@/components/Cards/TeamCard'
 import WhyCard from '@/components/Cards/WhyCard'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import ImageCarousel from '@/components/ImageCarousel'
 import SpecialText from '@/components/SpecialText'
 import {
   ContactUsData,
   OurPorjectsGridData,
   StriveGridData,
-  TeamGridData,
   WhyGridData,
 } from '@/const/grid'
 import { ResolutionTypes, whichResolution } from '@/const/resolutioon'
 import Graphics from '@/icons/graphics.svg'
-import { useEffect, useState } from 'react'
+import RequestFrom from '@/icons/requestForm1.svg'
+
+import { useEffect, useRef, useState } from 'react'
 
 const Home = () => {
+  const myRef = useRef<HTMLDivElement | null>(null)
+
   const [width, setWidth] = useState<number>(0)
   const [height, setHeight] = useState<number>(0)
   const [resolution, setResolution] = useState<ResolutionTypes>('md')
+
+  const executeScroll = () => {
+    if (myRef !== null && myRef.current !== null) {
+      myRef.current.scrollIntoView()
+    }
+  }
 
   useEffect(() => {
     setWidth(window.screen.width)
@@ -55,7 +64,7 @@ const Home = () => {
                 marginX={'0px'}
                 marginY={'50px'}
                 style={'dark'}
-                onClick={() => window.location.reload()}
+                onClick={executeScroll}
               />
             </li>
           </nav>
@@ -80,7 +89,7 @@ const Home = () => {
               title={item.title}
               text={item.text}
               Svg={item.Svg}
-              onClickBtn={item.onClickBtn}
+              onClickBtn={executeScroll}
             />
           ))}
         </div>
@@ -98,12 +107,12 @@ const Home = () => {
               list_title={item.list_title}
               list_items={item.list_items}
               Svg={item.Svg}
-              onClick={item.onClick}
+              onClick={executeScroll}
             />
           ))}
         </div>
 
-        <div className="flex flex-col d lg:w-lg my-[100px]">
+        <div className="flex flex-col d lg:w-lg mb-[100px]">
           <div className="flex mb-[34px] md:text-h26 lg:text-h40">
             <SpecialText prev="Why choose" main="Witr?" next="" />
           </div>
@@ -120,36 +129,42 @@ const Home = () => {
                 title={item.title}
                 text={item.text}
                 Svg={item.Svg}
-                onClickDiv={item.onClickDiv}
+                onClickDiv={executeScroll}
               />
             ))}
           </div>
         </div>
 
-        <div className="flex flex-col d lg:w-lg my-[100px]">
+        <div className="flex flex-col md:w-md lg:w-lg mb-[100px]">
           <div className="flex mb-[34px] md:text-h26 lg:text-h40">
             <SpecialText prev="Meet our" main="team" next="" />
           </div>
-          <div
-            className={`
-              grid
-              md:w-md md:grid-rows-2 md:grid-cols-2 md:gap-x-[20px] md:gap-y-[37px]
-              lg:w-lg lg:grid-rows-1 lg:grid-cols-4  lg:gap-x-[30px] lg:gap-y-[37px]
-            `}
-          >
-            {TeamGridData.map((item, key) => (
-              <TeamCard
-                key={key}
-                title={item.title}
-                text={item.text}
-                img={item.img}
-                onClickDiv={item.onClickDiv}
-              />
-            ))}
+          <ImageCarousel />
+        </div>
+
+        <div
+          ref={myRef}
+          className="flex w-full justify-start items-center md:w-md lg:w-lg mb-[100px]"
+        >
+          <div className="flex w-[50%] flex-col md:text-h26 lg:text-h40">
+            <SpecialText
+              prev="Do you have any upcoming"
+              main="projects?"
+              next=""
+            />
+            <div className="text-black mt-[30px] mb-[100px] text-h26">
+              We are here to help you with your ideas.
+            </div>
+            <div className="flex md:w-[220px] lg:w-[450px] flex-col">
+              <DefaultButton text="Send a request" style="dark" />
+            </div>
+          </div>
+          <div>
+            <RequestFrom height="400" width="500" viewBox={'0 0 750 450'} />
           </div>
         </div>
 
-        <div className="flex flex-col md:w-md lg:w-lg md:text-h20 lg:text-h36 my-[100px]">
+        <div className="flex flex-col md:w-md lg:w-lg md:text-h20 lg:text-h36 mb-[100px]">
           <div className="flex mb-[34px] md:text-h26 lg:text-h40">
             <SpecialText prev="" main="Contact" next="us" newLine={false} />
           </div>
@@ -166,19 +181,19 @@ const Home = () => {
                   title={item.title}
                   text={item.text}
                   Svg={item.Svg}
-                  onClickBtn={item.onClickBtn}
+                  onClickBtn={executeScroll}
                 />
               ))}
             </div>
           ) : (
-            <div className="flex justify-between mb-[120px]">
+            <div className="flex justify-between mb-[20px]">
               {ContactUsData.map((item, key) => (
                 <ContactUsCard
                   key={key}
                   title={item.title}
                   text={item.text}
                   Svg={item.Svg}
-                  onClickBtn={item.onClickBtn}
+                  onClickBtn={executeScroll}
                 />
               ))}
             </div>

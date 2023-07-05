@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const TeamCard: React.FC<ImgCardProps> = ({ title, text, img, onClickDiv }) => {
   return (
-    <div className="relative flex" onClick={onClickDiv}>
+    <div className="flex list-none w-[330px]" onClick={onClickDiv}>
       <div className="flex flex-col items-center w-full">
         <Image
           className="rounded-md h-[380px] w-[330px] object-cover	"

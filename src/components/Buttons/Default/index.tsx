@@ -1,12 +1,8 @@
 import { Props } from '@/utils/interfaces/button'
 import React from 'react'
 
-const DefaultButton: React.FC<Props> = ({
-  text,
-  style,
-  onClick,
-}) => {
-  let className = `button flex justify-center items-center 
+const DefaultButton: React.FC<Props> = ({ text, style, isHidden, onClick }) => {
+  let className = `flex button justify-center items-center 
     font-black rounded-md shadow-md
     sm:text-h16 md:text-h18 lg:text-h20 
     md:px-xmd md:py-ymd lg:px-xlg lg:py-ylg 
@@ -14,8 +10,8 @@ const DefaultButton: React.FC<Props> = ({
 
   className +=
     style === 'dark'
-      ? ' bg-cblue bg-gradient-spread text-white'
-      : ' bg-white text-cblue border-2 rounded-md shadow-md border-cblue'
+      ? ' bg-cblue hover:bg-white border-2 border-white text-white hover:border-cblue hover:text-cblue rounded-md shadow-md'
+      : ' bg-white hover:bg-cblue border-2 border-cblue text-cblue rounded-md shadow-md hover:text-white'
 
   return (
     <button className={className} onClick={onClick}>

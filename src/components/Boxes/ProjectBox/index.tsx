@@ -43,7 +43,7 @@ const ProjectBox: React.FC<BoxProps> = ({
           </nav>
         </li>
 
-        <li className="list-none flex text-h36 text-black font-bold">
+        <li className="list-none flex flex-col w-[200px] text-h36 text-black font-bold">
           <DefaultButton onClick={onClick} text="Get" style="dark" />
         </li>
       </nav>

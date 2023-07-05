@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SvgCardProps } from '..'
 import DefaultButton from '../../Buttons/Default'
 
@@ -8,6 +8,8 @@ const StriveCard: React.FC<SvgCardProps> = ({
   Svg,
   onClickBtn,
 }) => {
+  const [hidden, setHidden] = useState<boolean>(true)
+
   return (
     <div
       className={`relative flex 
@@ -18,6 +20,8 @@ const StriveCard: React.FC<SvgCardProps> = ({
         shadow-card
         px-[49px] py-[30px]
     `}
+      onMouseEnter={() => setHidden(false)}
+      onMouseLeave={() => setHidden(true)}
     >
       <div className="flex flex-col items-center w-full">
         <div className="flex h-[259px]">
@@ -29,7 +33,9 @@ const StriveCard: React.FC<SvgCardProps> = ({
         <div className="text-left w-full mt-[27px] text-black text-h16 font-sans">
           {text}
         </div>
-        <div className="absolute bottom-[30px] right-[30px]">
+        <div
+          className={hidden ? 'hidden' : 'absolute bottom-[30px] right-[30px]'}
+        >
           <DefaultButton
             text={'Get'}
             style={'dark'}
