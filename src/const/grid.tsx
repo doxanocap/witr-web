@@ -7,6 +7,7 @@ import ContactUs4 from '@/icons/contactUs4.svg'
 import OurProjects1 from '@/icons/ourProjects1.svg'
 import OurProjects2 from '@/icons/ourProjects2.svg'
 import OurProjects3 from '@/icons/ourProjects3.svg'
+import OurProjects4 from '@/icons/ourProjects4.svg'
 import striveCard1 from '@/icons/striveCard1.svg'
 import striveCard2 from '@/icons/striveCard2.svg'
 import striveCard3 from '@/icons/striveCard3.svg'
@@ -18,8 +19,17 @@ import WhyCard2 from '@/icons/whyCard2.svg'
 import WhyCard3 from '@/icons/whyCard3.svg'
 import WhyCard4 from '@/icons/whyCard4.svg'
 
-import TeamAlibiSerikbay from '@/images/alibi_serikbay.png'
+import TeamAdilkhanOrynbay from '@/images/adilkhan_orynbay.png'
+import TeamAlibiSerikbay from '@/images/alibi_serikbay.jpg'
+import TeamAlmasErbolat from '@/images/almas_erbolat.png'
 import TeamEldosKadirbekov from '@/images/eldos_kadirbekov.jpg'
+import TeamKuanyshBakytuly from '@/images/kuanysh_bakytuly.png'
+
+import Partner1 from '@/icons/partner1.svg'
+import Partner2 from '@/icons/partner2.svg'
+import Partner3 from '@/icons/partner3.svg'
+import Partner4 from '@/icons/partner4.svg'
+import Partner5 from '@/icons/partner5.svg'
 
 export const StriveGridData: SvgCardProps[] = [
   {
@@ -160,6 +170,30 @@ export const OurPorjectsGridData: BoxProps[] = [
       window.location.reload()
     },
   },
+  {
+    float: 'right',
+    title: 'Mobile Application',
+    description:
+      'Our solution for the DinaMarket.kz, mobile shopping app for food and groceries with ease. Find a wide range of high-quality products, from fresh produce to pantry staples, all at your fingertips.',
+    list_title: 'Services:',
+    list_items: ['Full accompaniment', 'Analytics', 'Client contact'],
+    Svg: OurProjects3,
+    onClick: () => {
+      window.location.reload()
+    },
+  },
+  {
+    float: 'right',
+    title: 'B2B projects',
+    description:
+      'Introducing our latest B2B portal project, designed to streamline and enhance your business-to-business interactions. Our platform offers a comprehensive solution for seamless collaboration and efficient transactions.',
+    list_title: 'Services:',
+    list_items: ['Enhanced efficiency', 'Business growth', 'Deployment'],
+    Svg: OurProjects4,
+    onClick: () => {
+      window.location.reload()
+    },
+  },
 ]
 
 export const TeamGridData: ImgCardProps[] = [
@@ -180,65 +214,68 @@ export const TeamGridData: ImgCardProps[] = [
     },
   },
   {
-    title: 'Eldos Kadirbekov',
-    text: 'CTO & co-founder',
-    img: TeamEldosKadirbekov,
+    title: 'Adilkhan Orynbay',
+    text: 'Frontend Developer',
+    img: TeamAdilkhanOrynbay,
     onClickDiv: () => {
       window.location.reload()
     },
   },
   {
-    title: 'Alibi Serikbay',
-    text: 'CEO & co-founder',
-    img: TeamAlibiSerikbay,
+    title: 'Almas Yerbolat',
+    text: 'Backend Developer',
+    img: TeamAlmasErbolat,
     onClickDiv: () => {
       window.location.reload()
     },
   },
   {
-    title: 'Eldos Kadirbekov',
-    text: 'CTO & co-founder',
-    img: TeamEldosKadirbekov,
+    title: 'Kuanysh Bakytuly',
+    text: 'ML Engineer',
+    img: TeamKuanyshBakytuly,
+    onClickDiv: () => {
+      window.location.reload()
+    },
+  },
+]
+
+export const PartnersGridData: SvgCardProps[] = [
+  {
+    title: 'NU',
+    text: '',
+    Svg: Partner1,
     onClickDiv: () => {
       window.location.reload()
     },
   },
   {
-    title: 'Alibi Serikbay',
-    text: 'CEO & co-founder',
-    img: TeamAlibiSerikbay,
+    title: 'BI Group',
+    text: '',
+    Svg: Partner2,
     onClickDiv: () => {
       window.location.reload()
     },
   },
   {
-    title: 'Eldos Kadirbekov',
-    text: 'CTO & co-founder',
-    img: TeamEldosKadirbekov,
+    title: 'MED 365',
+    text: '',
+    Svg: Partner3,
     onClickDiv: () => {
       window.location.reload()
     },
   },
   {
-    title: 'Alibi Serikbay',
-    text: 'CEO & co-founder',
-    img: TeamAlibiSerikbay,
+    title: 'Connected Home',
+    text: '',
+    Svg: Partner4,
     onClickDiv: () => {
       window.location.reload()
     },
   },
   {
-    title: 'Eldos Kadirbekov',
-    text: 'CTO & co-founder',
-    img: TeamEldosKadirbekov,
-    onClickDiv: () => {
-      window.location.reload()
-    },
-  },
-  {
-    title: 'Alibi Serikbay',
-    text: 'CEO & co-founder',
-    img: TeamAlibiSerikbay,
+    title: 'AK CENT Microsystems',
+    text: '',
+    Svg: Partner5,
     onClickDiv: () => {
       window.location.reload()
     },

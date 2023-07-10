@@ -1,12 +1,14 @@
 import { TeamGridData } from '@/const/grid'
 import { useSnapCarousel } from 'react-snap-carousel'
-import { ImgCarousel } from '../Cards'
 import TeamCard from '../Cards/TeamCard'
 
-const ImageCarousel: React.FC<ImgCarousel> = ({ executeScroll }) => {
+const ImageCarousel = () => {
   const { scrollRef } = useSnapCarousel()
   return (
-    <nav ref={scrollRef} className="flex overflow-auto space-x-[30px] py-[30px] snap-x">
+    <nav
+      ref={scrollRef}
+      className="flex overflow-x-auto scrollbar scrollbar-w-2 scrollbar-h-2 scrollbar-thumb-gray-900 scrollbar-thumb-rounded-md space-x-[30px] py-[30px] snap-x"
+    >
       {TeamGridData.map((item, key) => (
         <div className="flex w-[330px] " key={key}>
           <TeamCard
@@ -14,7 +16,7 @@ const ImageCarousel: React.FC<ImgCarousel> = ({ executeScroll }) => {
             title={item.title}
             text={item.text}
             img={item.img}
-            onClickDiv={executeScroll}
+            onClickDiv={() => {}}
           />
         </div>
       ))}

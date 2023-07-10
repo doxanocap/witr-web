@@ -16,6 +16,3 @@ export interface ImgCardProps {
   onClickDiv?: (e: React.MouseEvent<HTMLDivElement>) => void
 }
 
-export interface ImgCarousel {
-  executeScroll: () => void
-}

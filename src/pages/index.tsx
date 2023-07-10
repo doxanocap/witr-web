@@ -10,6 +10,7 @@ import SpecialText from '@/components/SpecialText'
 import {
   ContactUsData,
   OurPorjectsGridData,
+  PartnersGridData,
   StriveGridData,
   WhyGridData,
 } from '@/const/grid'
@@ -25,6 +26,7 @@ const Home = () => {
   const [width, setWidth] = useState<number>(0)
   const [height, setHeight] = useState<number>(0)
   const [resolution, setResolution] = useState<ResolutionTypes>('md')
+  const [prev, setPrev] = useState<string>('Transform Your Business with us')
 
   const executeScroll = () => {
     if (myRef !== null && myRef.current !== null) {
@@ -46,7 +48,7 @@ const Home = () => {
           <nav className="absolute space-y-[30px] md:w-[200px] lg:w-[620px] left-0">
             <li className="flex list-none md:text-h26 lg:text-h40 font-black">
               <SpecialText
-                prev="Transform Your Business with us"
+                prev={prev}
                 main="Witr.kz "
                 next="- Your Trusted IT Partner "
                 newLine={true}
@@ -64,7 +66,9 @@ const Home = () => {
                 marginX={'0px'}
                 marginY={'50px'}
                 style={'dark'}
-                onClick={executeScroll}
+                onClick={() => {
+                  setPrev('haha')
+                }}
               />
             </li>
           </nav>
@@ -140,6 +144,25 @@ const Home = () => {
             <SpecialText prev="Meet our" main="team" next="" />
           </div>
           <ImageCarousel />
+        </div>
+
+        <div className="flex flex-col d lg:w-lg mb-[100px]">
+          <div className="flex mb-[34px] md:text-h26 lg:text-h40">
+            <SpecialText prev="Our" main="partners" next="" />
+          </div>
+          <div
+            className={`
+              grid justify-start  
+              md:w-md md:grid-rows-2 md:grid-cols-3 md:gap-x-[20px] md:gap-y-[37px]
+              lg:w-lg lg:grid-rows-2 lg:grid-cols-3 lg:gap-x-[30px] lg:gap-y-[37px]
+            `}
+          >
+            {PartnersGridData.map((item, key) => (
+              <div className="flex justify-center items-center" key={key}>
+                <item.Svg />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div
