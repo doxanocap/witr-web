@@ -1,27 +1,22 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import WitrLogo from '@/icons/logoHeader.svg'
-import { hasCookie } from 'cookies-next'
-import { useEffect, useState } from 'react'
-import DefaultButton from '../Buttons/Default'
-import SelectButton from '../Buttons/Select'
+import HeaderLogo from "@/images/logo.png";
+import DefaultButton from "../Buttons/Default";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { consts } from "@/const/consts";
 
-const HeaderTexts = ['ABOUT', 'SERVICES', 'PORTFOLIO', 'CONTACTS']
+const HeaderTexts = [
+  {
+    text: "My NU",
+    link: "https://my.nu.edu.kz/wps/myportal/student/!ut/p/b1/lZDdboJAEEafyOyAwC6XLOwKWMEVF5Ub438tKlalJTy9W9PEVKNt526Sc2a-GZShUcPGOhgGJmiIst3kY72anNbFbrL56jNrrMeCOVRzoMUFBhH41GepDUCbChgpAB6UAzd-GhHl2zJOSKRDS_v2Hy3o63_bfwVeNAucdihMjm0dPOO__l3AX_wBym6Q-wQX4NmLfk4A8DkI3kl9KWTzkuFpCvWkyC-2CzRSGL5ixA1NhXWD0CRS3WKiPhqms2PlFs6nx7weg1xwbVnR8pBMDywaHGiUJKGxdDdxXdpjEnvefNGwWF4YWS2sAQ32ZdvyuzpWZ751qvd2Wk17Zm_WIjLIc4k9RufVUJr11N3lM7I6nsryuEfbbMM5t4N197U4A9TkE2Y!/dl4/d5/L2dBISEvZ0FBIS9nQSEh/pw/Z7_2OQEAB1A08CJ50QIPIJ58U20G5/ren/-/#",
+  },
+  { text: "Instagram", link: "https://www.instagram.com/nu.motorsports/" },
+  { text: "Telegram", link: "https://t.me/FSAE_NU" },
+];
 
 const Header = () => {
-  const [auth, setAuth] = useState<boolean>(false)
-
-  useEffect(() => {
-    const isCookieExists = hasCookie('token')
-    if (isCookieExists) {
-      setAuth(true)
-    }
-    setAuth(false)
-  }, [])
-
-  const handleLogout = () => {
-    console.log('log out button clicked')
-  }
+  const router = useRouter();
 
   return (
     <div className="flex justify-center bg-white">
@@ -29,46 +24,44 @@ const Header = () => {
         <nav className="flex justify-center items-center h-full md:space-x-[20px] lg:space-x-[30px]">
           <li className="list-none">
             <div className="flex cursor-pointer h-full items-center">
-              <WitrLogo />
+              <Image
+                className="rounded-md h-[100px] w-[100px] object-cover	"
+                src={HeaderLogo}
+                loading={"lazy"}
+                quality={100}
+                height={100}
+                width={100}
+                alt="member"
+              />
             </div>
           </li>
 
           {HeaderTexts.map((item, key) => (
             <li key={key} className="list-none">
               <Link
-                href={'/'}
+                href={item.link}
                 className="font-black text-cblue md:text-h14 lg:text-h20"
               >
-                {item}
+                {item.text}
               </Link>
             </li>
           ))}
         </nav>
         <nav className="flex justify-center items-center h-full md:space-x-[15px] lg:space-x-[30px]">
           <li className="list-none">
-            <SelectButton
-              text="ENG"
-              style="light"
-              marginX="7.5px"
-              onClick={() => {
-                window.location.reload()
-              }}
-            />
-          </li>
-          <li className="list-none">
             <DefaultButton
               text="Leave a request"
               style="dark"
               marginX="7.5px"
               onClick={() => {
-                window.location.reload()
+                router.push(consts.Links.LeaveRequest);
               }}
             />
           </li>
         </nav>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,13 +1,13 @@
-import React from 'react'
-import { SvgCardProps } from '..'
+import React from "react";
+import { SvgCardProps } from "..";
 
 const WhyCard: React.FC<SvgCardProps> = ({ title, text, Svg, onClickDiv }) => {
   return (
     <div
       className={`relative flex 
-        lg:h-[345px]
-        md:h-[345px] 
-        sm:h-[345px]
+        lg:h-[370px]
+        md:h-[370px] 
+        sm:h-[370px]
         bg-white rounded-md cursor-pointer 
         shadow-card
         px-[20px] py-[37px]
@@ -15,7 +15,7 @@ const WhyCard: React.FC<SvgCardProps> = ({ title, text, Svg, onClickDiv }) => {
       onClick={onClickDiv}
     >
       <div className="flex flex-col items-center w-full">
-        <div className="flex h-[259px]">
+        <div className="flex h-[140px] min-h-[140px]">
           <Svg />
         </div>
         <div className={`w-full bg-[#8000FF] mb-[20px] h-[1px]`}></div>
@@ -27,7 +27,7 @@ const WhyCard: React.FC<SvgCardProps> = ({ title, text, Svg, onClickDiv }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WhyCard
+export default WhyCard;
