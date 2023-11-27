@@ -119,14 +119,14 @@ export const WhyGridData: SvgCardProps[] = [
 export const OurPorjectsGridData: BoxProps[] = [
   {
     float: "right",
-    title: "AI chat Bot",
+    title: "FSAE car",
     description:
-      "Our AI chatbots are the ultimate solution for your business. By integrating our cutting-edge technology into your existing systems, you can take your operations to the next level, delight your customers, and achieve exponential growth.",
-    list_title: "Benefits for Your Business:",
+      "Formula SAE (FSAE) involves university students designing and building small, high-performance race cars for competition. These single-seat vehicles are part of events covering design evaluation, business presentation, cost analysis, and dynamic performance tests. Building an FSAE car provides students with practical engineering experience, teamwork skills, and creative problem-solving. The competition's rulebook ensures safety and fair competition while encouraging innovative designs.",
+    list_title: "Benefits:",
     list_items: [
-      "Enhanced Customer Experience",
-      "Streamlined Operations",
-      "24/7 Support",
+      "Practical engineering experience",
+      "Teamwork skills development",
+      "Encourages creative problem-solving",
     ],
     Svg: OurProjects1,
     onClick: () => {

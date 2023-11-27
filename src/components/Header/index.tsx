@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-import HeaderLogo from "@/images/logo.png";
 import DefaultButton from "../Buttons/Default";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { consts } from "@/const/consts";
+import HeaderLogo from "@/icons/logo.svg";
 
 const HeaderTexts = [
   {
@@ -23,16 +23,8 @@ const Header = () => {
       <header className="flex justify-between items-center h-[100px] lg:w-lg md:w-md md:px-md">
         <nav className="flex justify-center items-center h-full md:space-x-[20px] lg:space-x-[30px]">
           <li className="list-none">
-            <div className="flex cursor-pointer h-full items-center">
-              <Image
-                className="rounded-md h-[100px] w-[100px] object-cover	"
-                src={HeaderLogo}
-                loading={"lazy"}
-                quality={100}
-                height={100}
-                width={100}
-                alt="member"
-              />
+            <div>
+              <HeaderLogo />
             </div>
           </li>
 
