@@ -76,33 +76,12 @@ const Home = () => {
               />
             </li>
           </nav>
-          <div className="absolute left-0 bottom-[20px] md:text-h26 lg:text-h40">
-            <SpecialText prev="What we" main="strive in" next="" />
-          </div>
           <div className="">
             <Graphics width="500" height="500" viewBox={"0 0 700 700"} />
           </div>
         </div>
 
-        <div
-          className={`
-            grid justify-center 
-            md:w-md md:grid-rows-3 md:grid-cols-2 md:gap-x-[20px] md:gap-y-[37px]
-            lg:w-lg lg:grid-rows-2 lg:grid-cols-3 lg:gap-x-[30px] lg:gap-y-[37px]
-          `}
-        >
-          {StriveGridData.map((item, key) => (
-            <StriveCard
-              key={key}
-              title={item.title}
-              text={item.text}
-              Svg={item.Svg}
-              onClickBtn={executeScroll}
-            />
-          ))}
-        </div>
-
-        <div className="flex  flex-col items-start md:w-md lg:w-lg mt-[100px]">
+        <div className="flex  flex-col items-start md:w-md lg:w-lg">
           <div className="mb-[10px] md:text-h26 lg:text-h40 font-bold text-cblue">
             About Us
           </div>
@@ -191,18 +170,27 @@ const Home = () => {
 
         <div
           ref={myRef}
-          className="flex w-full justify-start items-center md:w-md lg:w-lg mb-[100px]"
+          className={`
+          
+              mb-[100px]
+              grid justify-start  
+              md:w-md md:grid-rows-2 md:grid-cols-1 md:gap-x-[0px] md:gap-y-[0px]
+              lg:w-lg lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-[50px] lg:gap-y-[0px]
+            `}
         >
-          <div className="flex w-[50%] flex-col md:text-h26 lg:text-h40">
+          <div className="flex flex-col md:h-[300px] md:text-h26 lg:text-h40">
             <SpecialText
-              prev="Do you have any upcoming"
-              main="projects?"
+              prev="Do you want to become part of our"
+              main="team?"
               next=""
             />
-            <div className="text-black mt-[30px] mb-[100px] text-h26">
-              We are here to help you with your ideas.
+            <div className="text-black mt-[10px] mb-[50px] md:text-h20 lg:text-h26">
+              We are here to help you grow, develop, and succeed in your
+              personal and professional journey. Our commitment is to provide
+              guidance, support, and resources that empower you to overcome
+              challenges, seize opportunities, and achieve your goals. .
             </div>
-            <div className="flex md:w-[220px] lg:w-[450px] flex-col">
+            <div className=" flex md:w-[220px] lg:w-[450px] flex-col">
               <DefaultButton
                 text="Send a request"
                 style="dark"
@@ -212,8 +200,8 @@ const Home = () => {
               />
             </div>
           </div>
-          <div>
-            <RequestFrom height="400" width="500" viewBox={"0 0 750 450"} />
+          <div className="">
+            <RequestFrom height="300" width="500" viewBox={"0 0 750 450"} />
           </div>
         </div>
 
