@@ -102,20 +102,27 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="flex flex-col items-start md:w-md lg:w-lg mt-[100px]">
-          <div className="mb-[34px] md:text-h26 lg:text-h40 font-bold text-cblue">
+        <div className="flex  flex-col items-start md:w-md lg:w-lg mt-[100px]">
+          <div className="mb-[10px] md:text-h26 lg:text-h40 font-bold text-cblue">
             About Us
           </div>
 
-          <div className="flex w-full">
+          <div
+            className={`
+              grid justify-start  
+              
+              md:w-md md:grid-rows-2 md:grid-cols-1 md:gap-x-[0px] md:gap-y-[30px]
+              lg:w-lg lg:grid-rows-1 lg:grid-cols-2 lg:gap-x-[50px] lg:gap-y-[10px]
+              `}
+          >
             <VideoPlayer />
-            <div className="flex ml-[34px] text-black md:text-[18px] lg:text-[22px] text-h4 text-left ">
+            <div className="flex text-black md:text-[18px] lg:text-[22px] text-left ">
               {consts.Texts.AboutUS}
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-start md:w-md lg:w-lg my-[100px]">
+        <div className="flex flex-col items-start md:w-md lg:w-lg mt-[50px]">
           <div className="mb-[34px] md:text-h26 lg:text-h40 font-bold text-black">
             Out projects
           </div>
@@ -133,7 +140,7 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="flex flex-col d lg:w-lg mb-[100px]">
+        <div className="flex flex-col md:w-md lg:w-lg mb-[100px]">
           <div className="flex mb-[34px] md:text-h26 lg:text-h40">
             <SpecialText prev="Why choose" main="NU Motorsports?" next="" />
           </div>
