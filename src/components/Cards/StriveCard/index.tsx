@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { SvgCardProps } from '..'
-import DefaultButton from '../../Buttons/Default'
+import React, { useState } from "react";
+import { SvgCardProps } from "..";
+import DefaultButton from "../../Buttons/Default";
 
 const StriveCard: React.FC<SvgCardProps> = ({
   title,
@@ -8,7 +8,7 @@ const StriveCard: React.FC<SvgCardProps> = ({
   Svg,
   onClickBtn,
 }) => {
-  const [hidden, setHidden] = useState<boolean>(true)
+  const [hidden, setHidden] = useState<boolean>(true);
 
   return (
     <div
@@ -34,19 +34,19 @@ const StriveCard: React.FC<SvgCardProps> = ({
           {text}
         </div>
         <div
-          className={hidden ? 'hidden' : 'absolute bottom-[30px] right-[30px]'}
+          className={hidden ? "hidden" : "absolute bottom-[30px] right-[30px]"}
         >
           <DefaultButton
-            text={'Get'}
-            style={'dark'}
-            marginX={'0px'}
-            marginY={'0px'}
+            text={"Get"}
+            style={"dark"}
+            marginX={"0px"}
+            marginY={"0px"}
             onClick={onClickBtn}
           />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default StriveCard
+export default StriveCard;

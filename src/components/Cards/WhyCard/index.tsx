@@ -1,5 +1,5 @@
-import React from 'react'
-import { SvgCardProps } from '..'
+import React from "react";
+import { SvgCardProps } from "..";
 
 const WhyCard: React.FC<SvgCardProps> = ({ title, text, Svg, onClickDiv }) => {
   return (
@@ -22,12 +22,12 @@ const WhyCard: React.FC<SvgCardProps> = ({ title, text, Svg, onClickDiv }) => {
         <div className="text-center w-full font-bold text-h20 text-black">
           {title}
         </div>
-        <div className="w-full mt-[19px] text-black lg:text-[18px] text-h4 text-center">
+        <div className="w-full mt-[19px] text-black sm:text-[14px] lg:text-[16px] md:text-12 text-center">
           {text}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WhyCard
+export default WhyCard;

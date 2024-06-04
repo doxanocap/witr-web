@@ -1,7 +1,7 @@
-import React from 'react'
-import { ImgCardProps } from '..'
+import React from "react";
+import { ImgCardProps } from "..";
 
-import Image from 'next/image'
+import Image from "next/image";
 
 const TeamCard: React.FC<ImgCardProps> = ({ title, text, img, onClickDiv }) => {
   return (
@@ -10,7 +10,7 @@ const TeamCard: React.FC<ImgCardProps> = ({ title, text, img, onClickDiv }) => {
         <Image
           className="rounded-md h-[380px] w-[330px] object-cover	"
           src={img}
-          loading={'lazy'}
+          loading={"lazy"}
           quality={100}
           height={380}
           width={330}
@@ -22,13 +22,13 @@ const TeamCard: React.FC<ImgCardProps> = ({ title, text, img, onClickDiv }) => {
           </div>
 
           <div className={`w-full bg-[#8000FF] my-[18px] h-[1px]`}></div>
-          <div className="text-center w-full text-black text-h26 font-sans">
+          <div className="text-center w-full text-black text-h20 font-sans">
             {text}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TeamCard
+export default TeamCard;

@@ -1,31 +1,38 @@
 interface ResolutionParams {
-  name: string
-  minWidth: number
-  maxWidth: number
+  name: ResolutionTypes;
+  minWidth: number;
+  maxWidth: number;
 }
 
-export type ResolutionTypes = 'lg' | 'md'
+export type ResolutionTypes = "lg" | "md" | "sm";
 
 export const whichResolution = (width: number): ResolutionTypes => {
-  Resolutions.map((item, key) => {
-    if (width > item.minWidth && width < item.maxWidth) return item.name
-  })
-  return 'lg'
-}
+  const resolution = Resolutions.find(
+    (item) => item.minWidth <= width && width <= item.maxWidth
+  );
+  return resolution ? resolution.name : "lg";
+};
+
+export const SmallResolution: ResolutionParams = {
+  name: "sm",
+  minWidth: 0,
+  maxWidth: 450,
+};
 
 export const MediumResolution: ResolutionParams = {
-  name: 'md',
-  minWidth: 0,
+  name: "md",
+  minWidth: 451,
   maxWidth: 1280,
-}
+};
 
 export const LargeResolution: ResolutionParams = {
-  name: 'lg',
-  minWidth: 1280,
-  maxWidth: 1920,
-}
+  name: "lg",
+  minWidth: 1281,
+  maxWidth: 9999,
+};
 
 export const Resolutions: ResolutionParams[] = [
+  SmallResolution,
   MediumResolution,
   LargeResolution,
-]
+];
