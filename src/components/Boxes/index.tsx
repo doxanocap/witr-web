@@ -7,6 +7,5 @@ export interface BoxProps {
   list_title: string;
   list_items: string[];
   Svg: React.FC;
-  resoultuinl: ResolutionTypes;
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }

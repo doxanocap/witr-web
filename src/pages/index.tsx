@@ -129,7 +129,6 @@ const Home = () => {
               list_title={item.list_title}
               list_items={item.list_items}
               Svg={item.Svg}
-              resoultuinl={resolution}
               onClick={scrollToContacts}
             />
           ))}
